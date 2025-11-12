@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>Student Marksheet</title>
+<style>
+	table{
+		background-color:pink;
+		border:1px solid;
+		margin-top:60px;
+	}
+	#name,#res,#avg,#grd1{
+		background-color:yellow;
+	}
+	input [type=text],[type=number]{
+		
+	}
+</style>
+<script>
+	function test()
+	{
+		var stdName=document.myform.sname.value;
+			document.getElementById("name").innerHTML=stdName;
+		var sub1=document.myform.maths.value;
+		var sub2=document.myform.science.value;
+		var sub3=document.myform.eng.value;
+		var total=parseFloat(sub1)+parseFloat(sub2)+parseFloat(sub3);
+			document.getElementById("res").innerHTML=total;
+		var average=(total/300)*100;
+			document.getElementById("avg").innerHTML=parseFloat(average);
+			
+		
+		if(average >= 90){
+		
+			document.getElementById("grd1").innerHTML="A";
+		}
+		else if(average >= 80){
+			document.getElementById("grd1").innerHTML="B";
+		}
+		else if(average >= 70){
+			document.getElementById("grd1").innerHTML="C";
+		}
+		else if(average >= 40){
+			document.getElementById("grd1").innerHTML="D";
+		}
+		else{
+			document.getElementById("grd1").innerHTML="F";
+		}
+		
+}	
+</script>
+</head>
+<body>
+	<form name="myform">
+	<table align="center" cellpadding=5>
+		<td colspan=2 align="center"><h3> Student Marksheet </h3></td>
+
+		<tr>
+			<td>Student Name: <input type="text" name="sname"></td>
+		</tr>
+		<tr>
+			<td>Maths: <input type="number" name="maths"></td>
+
+		</tr>
+		<tr>
+			
+			<td>Science: <input type="number" name="science"></td>
+
+		</tr>
+		<tr>
+			<td>English:<input type="number" name="eng"></td>
+
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<input type="button" Value="Result" onClick="test()"></td>
+		</tr>
+		<tr>
+			<td>Student Name:<span id="name"></td>
+		</tr>
+		<tr>
+			<td>Total: <span id="res"></span></td>
+		</tr>
+		<tr>
+			<td>Percentage: <span id="avg"></span></td>
+		</tr>
+		<tr>
+			<td>Grade: <span id="grd1"></span></td>
+
+		</tr>
+	</table>	
+	</form>
+</body>
+</html>

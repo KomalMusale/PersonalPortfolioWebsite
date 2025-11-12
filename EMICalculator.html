@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>EMI Calculator</title>
+<script>
+	fumction loanCal(){
+		var amount= document.myform.LA.value;
+		var tenure= document.myform.LT.value;
+		var interest= (amount*tenure*0)/100;
+			document.getElementById("LA").getElementById("LT").innerHTML=interest;
+	}
+</script>
+</head>
+<body>
+<form name="myform">
+	<table>
+		<tr><td><h3> Loan EMI Calculator</h3></td></tr>
+		
+		<tr>
+			<td>Loan Amount: $<input type="text" id="LA"></td>
+		</tr>
+		<tr>
+			<td>Loan Tenure: <input type="number" id="LT">
+						<select>
+							<option> months </option>
+							<option> years </option>
+						</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Interest Rate: %<input type="text" id="IR"></td>
+		</tr>
+		<tr>
+			<td><button id="button" onClick="return loanCal()">Calculate</button></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

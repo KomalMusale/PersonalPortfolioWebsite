@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Assignment 2</title>
+<style>
+	#name, #email, #website, #message{
+		border-color:Red;
+		border: 1px solid red;
+	}
+	span{
+		color:red;
+		font-size:12px;
+	}
+	.container{
+		margin-left:30px;
+	}
+	
+</style>
+<script>
+	function valid(){
+		var Name = document.myform.name.value;
+		if(Name==""){
+			document.getElementById('n').innerHTML="This field is required";
+			return false;
+		}
+		var Email = document.myform.email.value;
+		if(Email==""){
+			document.getElementById('e').innerHTML="A valid email address is required";
+			return false;
+		}
+		var Webs = document.myform.website.value;
+		if(Webs==""){
+			document.getElementById('web').innerHTML="A valid url is required";
+			return false;
+		}
+		var Mesg = document.myform.message.value;
+		if(Mesg==""){
+			document.getElementById("msg").innerHTML="This field is required";
+			return false;
+		}	
+	}
+</script>
+</head>
+<body>
+	<form name="myform" onSubmit="return valid()">
+		Name: <input type="text" id="name">
+		<span id="n"></span><br><br>
+
+		Email: <input type="email" id="email">
+		<span id="e"></span><br><br>
+	
+		Website: <input type="text" id="website">
+		<span id="web"></span><br><br>
+
+		Message: <textarea id="message"></textarea>
+		<span id="msg"></span><br><br>
+
+		<div class="container"><input type="submit" id ="submit"></div>
+	</form>
+</body>
+</html>

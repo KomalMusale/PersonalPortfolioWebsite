@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+<title>Course Application Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 25px 30px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="date"]{
+	width:50%;
+	}
+
+    .row {
+        display:flex;
+        Gap:10px;
+    }
+
+    .row input {
+	width:;
+    }
+
+    .radio-group {
+        Margin-top:5px;
+	width:50%;
+    }
+
+    textarea {
+        resize: vertical;
+        height: 60px;
+    }
+
+    button {
+        width: 100%;
+        background-color: #00a651;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #009148;
+    }
+
+    .course-options {
+        margin-top: 6px;
+    }
+
+    .course-options label {
+        font-weight: normal;
+        margin-right: 15px;
+    }
+
+    .gender {
+	margin-left:15px;
+     } 
+	
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Course Application</h2>
+
+    <form>
+        <label>Full name</label>
+        <input type="text" name="fullname" placeholder="Full name">
+
+        <div class="row">
+            <input type="email" name="email" placeholder="Email">
+            <input type="tel" name="phone" placeholder="Phone">
+        </div>
+
+        <label>Which course are you applying for?</label>
+        <div class="course-options">
+            <label><input type="radio" name="course" id="a" value="Course A">Course A</label>
+            <br>
+            <label><input type="radio" name="course" id="b" value="Course B">Course B</label>
+            <br>
+            <label><input type="radio" name="course" id="c" value="Course C">Course C</label>
+        </div>
+
+        <label>Date of birth</label>
+        <div class="row">
+            <input type="date">
+            <div class="radio-group">
+                <input type="radio" name="gender" class="gender" value="male"> MALE
+		<input type="radio" name="gender" class="gender" value="female"> FEMALE
+            </div>
+        </div>
+
+        <label>Education</label>
+        <select name="education">
+            <option value="school">School</option>
+            <option value="college">College</option>
+            <option value="graduate">Graduate</option>
+        </select>
+
+        <label>Address</label>
+        <textarea name="address" placeholder="Address"></textarea>
+
+        <div class="row">
+            <input type="text" name="city" placeholder="City">
+            <input type="text" name="state" placeholder="State">
+        </div>
+
+        <div class="row">
+            <input type="text" name="zip" placeholder="Zip Code">
+            <input type="text" name="country" placeholder="Country">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

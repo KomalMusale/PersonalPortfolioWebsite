@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title> Tooltip & Popover </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function()
+	{
+		$('[data-toggle = "tooltip"]').tooltip();
+	});
+	
+	$(document).ready(function()
+	{
+		$('[data-toggle = "popover"]').popover();
+	});
+</script>
+</head>
+<body>
+	<div class= "Container" >
+		<h3>Seed</h3>
+		<a href=" " data-toggle = "tooltip" title = "Seed infotech Pune"> 
+		Seed </a></div>
+	</div>
+	<div class= "Container" >
+		<h3>Web App</h3>
+		<a href=" " data-toggle = "popover" data-title = "Seed infotech Pune" 
+		data-content = "It's training & placement institute"> 
+		Seed </a></div>
+	</div>
+
+</body>
+</html>
